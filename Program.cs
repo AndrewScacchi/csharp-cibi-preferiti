@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Runtime.ConstrainedExecution;
 using System.Xml.Linq;
 using System;
+using Microsoft.VisualBasic;
 
 //Console.WriteLine("Hello, World!");
 //Console.WriteLine("//");
@@ -60,6 +61,9 @@ using System;
 //CONDITIONAL STATEMENTS
 //Snack1: L’utente inserisce due numeri in successione.Il software stampa il maggiore.
 {
+    Console.WriteLine("//");
+    Console.WriteLine("SNACK 1");
+
     string string1;
     Console.WriteLine("Insert a number ");
     string1 = Console.ReadLine();
@@ -83,6 +87,9 @@ using System;
 }
 //Snack2. L’utente inserisce due parole in successione.Il software stampa prima la parola più corta, poi la parola più lunga
 {
+    Console.WriteLine("//");
+    Console.WriteLine("SNACK 2");
+
     string word1;
     Console.WriteLine("Insert a word");
     word1= Console.ReadLine();
@@ -104,7 +111,44 @@ using System;
 
 //FOR CYCLE
 //Snack3.Il software deve chiedere per 10 volte all’utente di inserire un numero.Il programma stampa la somma di tutti i numeri inseriti.
+{
+    Console.WriteLine("//");
+    Console.WriteLine("SNACK 3");
+
+    int totalSum = 0;
+    for (int i=1; i<11; i++)
+    {
+
+        string answer;
+        Console.WriteLine( i+") Insert a number:");
+        answer = Console.ReadLine();
+        int localSum = Convert.ToInt32(answer);
+
+        totalSum = (totalSum+localSum);
+        Console.WriteLine("You inserted " + localSum);
+    }
+
+    Console.WriteLine("The total sum is " + totalSum);
+}
+
 //Snack4.Calcola la somma e la media dei numeri da 2 a 10.
+{
+    Console.WriteLine("//");
+    Console.WriteLine("SNACK 4");
+    int totalSum = 0;
+    int iterCount = 0;
+    for(int i=2; i<11; i++)
+    {
+        totalSum = (totalSum + i);
+        iterCount = (iterCount + 1);
+    }
+
+    int media = (totalSum/iterCount);
+
+    Console.WriteLine("The totalSum is " + totalSum);
+    Console.WriteLine("The media is " + media);
+
+}
 
 //OPERATOR MODULE
 //Snack5.Il software chiede all’utente di inserire un numero.Se il numero inserito è pari,stampa il numero, se è dispari, stampa il numero successivo.Array
