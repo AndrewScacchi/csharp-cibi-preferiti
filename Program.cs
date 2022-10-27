@@ -32,7 +32,7 @@ for (int i = 0; i < myFoods.Length; i++)
 int arrayLength = myFoods.Length;
 
 Console.WriteLine("//");
-Console.WriteLine(arrayLength);
+Console.WriteLine("Array length is " + arrayLength);
 
 // % is the module operator, reminder after dividing
 int arrayMiddle = (arrayLength/2);
@@ -40,7 +40,7 @@ int arrayMiddle = (arrayLength/2);
 if (arrayLength % 2 == 0)
 {
     Console.WriteLine("The Array has an Even pair of elements");
-    Console.WriteLine("The Middle elements are " + myFoods[arrayMiddle] + " and " + myFoods[arrayMiddle+1]);
+    Console.WriteLine("The Middle elements are " + myFoods[arrayMiddle-1] + " and " + myFoods[arrayMiddle]);
 }
 else
 {
