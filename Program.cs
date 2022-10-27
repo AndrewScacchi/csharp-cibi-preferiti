@@ -61,100 +61,190 @@ using Microsoft.VisualBasic;
 //CONDITIONAL STATEMENTS
 //Snack1: L’utente inserisce due numeri in successione.Il software stampa il maggiore.
 {
-    Console.WriteLine("//");
-    Console.WriteLine("SNACK 1");
+Console.WriteLine("//");
+Console.WriteLine("SNACK 1");
 
-    string string1;
-    Console.WriteLine("Insert a number ");
-    string1 = Console.ReadLine();
-    int num1 = Convert.ToInt32(string1);
+string string1;
+Console.WriteLine("Insert a number ");
+string1 = Console.ReadLine();
+int num1 = Convert.ToInt32(string1);
 
-    string string2;
-    Console.WriteLine("Insert another number ");
-    string2 = Console.ReadLine();
-    int num2 = Convert.ToInt32(string2);
+string string2;
+Console.WriteLine("Insert another number ");
+string2 = Console.ReadLine();
+int num2 = Convert.ToInt32(string2);
 
-    if (num1 > num2)
-    {
-        Console.WriteLine(num1 + " is bigger than " + num2);
-    } else if (num1 < num2){
-        Console.WriteLine(num2 + " is bigger than " + num1);
-    }
-    else
-    {
-        Console.WriteLine("They are the same number");
-    }
+if (num1 > num2)
+{
+Console.WriteLine(num1 + " is bigger than " + num2);
+}
+else if (num1 < num2)
+{
+Console.WriteLine(num2 + " is bigger than " + num1);
+}
+else
+{
+Console.WriteLine("They are the same number");
+}
 }
 //Snack2. L’utente inserisce due parole in successione.Il software stampa prima la parola più corta, poi la parola più lunga
 {
-    Console.WriteLine("//");
-    Console.WriteLine("SNACK 2");
+Console.WriteLine("//");
+Console.WriteLine("SNACK 2");
 
-    string word1;
-    Console.WriteLine("Insert a word");
-    word1= Console.ReadLine();
+string word1;
+Console.WriteLine("Insert a word");
+word1 = Console.ReadLine();
 
-    string word2;
-    Console.WriteLine("Insert another word");
-    word2 = Console.ReadLine();
+string word2;
+Console.WriteLine("Insert another word");
+word2 = Console.ReadLine();
 
-    if(word1.Length >= word2.Length)
-    {
-        Console.WriteLine(word1 + " " + word2);
-    }
-    else
-    {
-        Console.WriteLine(word2 + " " + word1);
-    }
+if (word1.Length >= word2.Length)
+{
+Console.WriteLine(word1 + " " + word2);
+}
+else
+{
+Console.WriteLine(word2 + " " + word1);
+}
 }
 
 
 //FOR CYCLE
 //Snack3.Il software deve chiedere per 10 volte all’utente di inserire un numero.Il programma stampa la somma di tutti i numeri inseriti.
 {
-    Console.WriteLine("//");
-    Console.WriteLine("SNACK 3");
+Console.WriteLine("//");
+Console.WriteLine("SNACK 3");
 
-    int totalSum = 0;
-    for (int i=1; i<11; i++)
-    {
+int totalSum = 0;
+for (int i = 1; i < 11; i++)
+{
 
-        string answer;
-        Console.WriteLine( i+") Insert a number:");
-        answer = Console.ReadLine();
-        int localSum = Convert.ToInt32(answer);
+string answer;
+Console.WriteLine(i + ") Insert a number:");
+answer = Console.ReadLine();
+int localSum = Convert.ToInt32(answer);
 
-        totalSum = (totalSum+localSum);
-        Console.WriteLine("You inserted " + localSum);
-    }
+totalSum = (totalSum + localSum);
+Console.WriteLine("You inserted " + localSum);
+}
 
-    Console.WriteLine("The total sum is " + totalSum);
+Console.WriteLine("The total sum is " + totalSum);
 }
 
 //Snack4.Calcola la somma e la media dei numeri da 2 a 10.
 {
-    Console.WriteLine("//");
-    Console.WriteLine("SNACK 4");
-    int totalSum = 0;
-    int iterCount = 0;
-    for(int i=2; i<11; i++)
-    {
-        totalSum = (totalSum + i);
-        iterCount = (iterCount + 1);
-    }
+Console.WriteLine("//");
+Console.WriteLine("SNACK 4");
+int totalSum = 0;
+int iterCount = 0;
+for (int i = 2; i < 11; i++)
+{
+totalSum = (totalSum + i);
+iterCount = (iterCount + 1);
+}
 
-    int media = (totalSum/iterCount);
+int media = (totalSum / iterCount);
 
-    Console.WriteLine("The totalSum is " + totalSum);
-    Console.WriteLine("The media is " + media);
+Console.WriteLine("The totalSum is " + totalSum);
+Console.WriteLine("The media is " + media);
 
 }
 
 //OPERATOR MODULE
 //Snack5.Il software chiede all’utente di inserire un numero.Se il numero inserito è pari,stampa il numero, se è dispari, stampa il numero successivo.Array
+{
+Console.WriteLine("//");
+Console.WriteLine("SNACK 5");
+
+string answer;
+Console.WriteLine("Insert a number:");
+answer = Console.ReadLine();
+int numGiven = Convert.ToInt32(answer);
+int numGivenPlus = (numGiven + 1);
+
+if (numGiven % 2 == 0)
+{
+Console.WriteLine("The number " + numGiven + " is even");
+}
+else
+{
+Console.WriteLine("The number " + numGiven + " is odd, the next even number " + numGivenPlus);
+}
+
+}
 //Snack6.In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.Chiedi all’utente il suo nome e comunicagli se può partecipare o meno allafesta.
-//Snack7.Crea un array vuoto.Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilonell’array.
-//Snack8.Crea un array di numeri interi e fai la somma di tutti gli elementi che sono inposizione dispari.
+{
+Console.WriteLine("//");
+Console.WriteLine("SNACK 6");
+
+string[] guestList = { "marco", "andrea", "paolo", "luca", "anna", "lara", "valeria" };
+string nameUser;
+Console.WriteLine("What is your name?");
+nameUser = Console.ReadLine();
+
+if (guestList.Any(nameUser.Contains))
+{
+Console.WriteLine("Welcome to the party " + nameUser);
+}
+else
+{
+Console.WriteLine("You are not invited");
+}
+}
+//Snack7.Crea un array vuoto.Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+{
+Console.WriteLine("//");
+Console.WriteLine("SNACK 7");
+
+List<int> numList = new List<int>();
+
+for (int i = 1; i < 7; i++)
+{
+string string1;
+Console.WriteLine(i + ") Insert a number ");
+string1 = Console.ReadLine();
+int num1 = Convert.ToInt32(string1);
+
+if (num1 % 2 != 0)
+{
+numList.Add(num1);
+}
+//convertrng back to array
+
+}
+int[] array = numList.ToArray();
+//printing final array
+Console.WriteLine("The Array contains");
+array.ToList().ForEach(i => Console.WriteLine(i.ToString()));
+}
+
+//Snack8.Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+{
+    Console.WriteLine("//");
+    Console.WriteLine("SNACK 7");
+
+    int[] myArray = { 1, 2, 3, 4, 5, 6, };
+
+    int totalSum = 0;
+
+    for (int i=0; i<myArray.Length; i++)
+    {
+        if (i % 2 != 0)
+        {
+            int localValue = myArray[i];
+            Console.WriteLine("The number " + localValue + " is in the odd index of " + i);
+
+            totalSum = (totalSum + localValue);
+        }
+    }
+
+    Console.WriteLine("The Sum of all number in Odd index positionm is " + totalSum);
+
+
+}
+
 
 //WHILE CYCLE
 //Snack9.Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando lasomma degli elementi è minore di 50.Random
