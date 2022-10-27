@@ -4,7 +4,7 @@ Console.WriteLine("//");
 
 //Initializing Work
 
-string[] myFoods = { "Lasagna", "Pizza", "Gelato", "Pizza all'Ananasso", "BurroFritto", "Ragu con Mayonese" };
+string[] myFoods = { "Lasagna", "Pizza", "Gelato", "Pizza all'Ananasso", "BurroFritto", "Ragu con Mayonese" }; //add an extra name like "banana" to make the array ODD
 
 // Length of Array
 Console.WriteLine("You like " + myFoods.Length + " different foods");
@@ -27,4 +27,24 @@ for (int i = 0; i < myFoods.Length; i++)
         Console.WriteLine("Last food is " + myFoods[i]);
     }
 };
+
+//Bonus Exercise: print only Middle Array element (account for even or odd array lengths
+int arrayLength = myFoods.Length;
+
+Console.WriteLine("//");
+Console.WriteLine(arrayLength);
+
+// % is the module operator, reminder after dividing
+int arrayMiddle = (arrayLength/2);
+
+if (arrayLength % 2 == 0)
+{
+    Console.WriteLine("The Array has an Even pair of elements");
+    Console.WriteLine("The Middle elements are " + myFoods[arrayMiddle] + " and " + myFoods[arrayMiddle+1]);
+}
+else
+{
+    Console.WriteLine("The Array has an Odd pair of elements");
+    Console.WriteLine("The Middle element is " + myFoods[arrayMiddle]);
+}
 
